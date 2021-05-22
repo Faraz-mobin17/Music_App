@@ -33,16 +33,16 @@ $artist = new Artist($con, $artistId);
         ?>
             <li class="trackListRow">
                 <div class="trackCount">
-                    <img class="play" src="<?php echo 'assets/images/icons/play-white.png'; ?>" alt="play icon image" onclick="setTrack('$albumSong->getId()',tempPlayList,true)">
+                    <img class="play" src="assets/images/icons/play-solid.svg" alt="play icon image" onclick="setTrack('$albumSong->getId()',tempPlayList,true)">
                     <span class="trackNumber"><?php echo $i ?></span>
                 </div>
 
                 <div class="trackInfo">
-                    <span class="trackName"><?php echo $albumSong->getTitle(); ?></span>
-                    <span class="ArtistName"><?php echo $albumArtist->getName(); ?></span>
+                    <span class="trackName" title="Track Name"><?php echo $albumSong->getTitle(); ?></span>
+                    <span class="ArtistName" title="Artist Name"><?php echo $albumArtist->getName(); ?></span>
                 </div>
                 <div class="trackOptions">
-                    <img src="<?php echo 'assets/images/icons/more.png' ?>" alt="dot icon" class="optionsButton">
+                    <img src="assets/images/icons/ellipse.svg" alt="dot icon" class="optionsButton">
                 </div>
                 <div class="trackDuration">
                     <span class="duration"><?php $albumSong->getDuration(); ?></span>

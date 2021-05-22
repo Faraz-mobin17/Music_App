@@ -19,7 +19,8 @@ function getInputValue($name)
 <html>
 
 <head>
-    <title>Welcome to Slotify!</title>
+    <title>What are you waiting for? SIGNUP</title>
+    <link rel="shortcut icon" href="assets/images/icons/favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/3dee8755de.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>

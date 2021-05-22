@@ -17,8 +17,8 @@ if (isset($_SESSION['userloggedin'])) {
 <html>
 
 <head>
-	<title>Welcome to Slotify!</title>
-
+	<title>Right Place for Music Lovers</title>
+	<link rel="shortcut icon" href="assets/images/icons/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="style.css">
 	<script src="https://kit.fontawesome.com/3dee8755de.js" crossorigin="anonymous"></script>
 	<script src="assets/js/jquery.min.js"></script>

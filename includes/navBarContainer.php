@@ -1,10 +1,11 @@
 <div id="navBarContainer">
 	<nav class="navBar">
-		<span onclick="openPage('index.php')" role="link" tabindex="0" class="logo">
+		<span onclick="openPage('home.php')" role="link" tabindex="0" class="logo">
 			<!-- <img src="assets/images/icons/play.png" alt="play image">
 			 -->
 			<div class="home-page-icon">
-				<i class="fas fa-music fa-2x"></i>
+				<!-- <i class="fas fa-music fa-2x"></i> -->
+				<img src="assets/images/icons/favicon.ico" alt="play image" style="width: 100%;height: auto;">
 			</div>
 		</span>
 		<div class="group">
@@ -27,7 +28,7 @@
 			</div>
 			<div class="navItem btn-danger">
 				<!-- <span onclick="openPage('logout.php')" role="link" tabindex="0" class="navItemLink">Logout</span> -->
-				<a href="logout.php" role="link" tabindex="0" class="navItemLink " style="color:white;padding-left: 40px;">Logout</a>
+				<a href="logout.php" role="link" tabindex="0" class="navItemLink " style="color:white;">Logout</a>
 			</div>
 		</div>
 	</nav>

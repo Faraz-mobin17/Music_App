@@ -10,13 +10,13 @@ include("includes/includedFiles.php");
 
     while ($row = mysqli_fetch_array($albumQuery)) :
     ?>
-        <div class="gridViewItem">
-            <span onclick="openPage('album.php?id=<?php echo $row['id']; ?>')" role="link" tabindex="0" style="color: #222;">
-                <img src="<?php echo $row['artworkPath']; ?>" alt="album image">
-                <div class="gridViewInfo">
-                    <?php echo $row['title']; ?>
-                </div>
-            </span>
+
+        <div class="gridViewItem" onclick="openPage('album.php?id=<?php echo $row['id']; ?>')" role="link" tabindex="0">
+            <img src="<?php echo $row['artworkPath']; ?>" alt="img">
+            <div class="gridViewInfo">
+                <?php echo $row['title']; ?>
+            </div>
+
         </div>
     <?php
     endwhile;

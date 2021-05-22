@@ -4,12 +4,12 @@ if (isset($_POST['loginButton'])) {
     $username = $_POST['loginUsername'];
     $password = $_POST['loginPassword'];
     // login function
-    $result = $account->login($username,$password);
+    $result = $account->login($username, $password);
 
     if ($result == true) {
         $_SESSION['userloggedin'] = $username;
-        header("Location: index.php");
+        header("Location: home.php");
     } else {
         echo "some error";
     }
-} 
+}
