@@ -2,8 +2,8 @@
 include("includes/includedFiles.php");
 ?>
 
-<h1 class="pageHeadingBig">Hello <span style="text-transform: capitalize;"><?php echo $_SESSION['userloggedin']; ?> </span> You might also like</h1>
-<hr class="line">
+<h1 class="pageHeadingBig" style="margin-bottom: 80px"> You might also like</h1>
+
 <div class="gridViewContainer">
     <?php
     $albumQuery = mysqli_query($con, "SELECT * FROM albums ORDER BY RAND() LIMIT 10");

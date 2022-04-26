@@ -19,7 +19,7 @@ if (isset($_SESSION['userloggedin'])) {
 <head>
 	<title>Right Place for Music Lovers</title>
 	<link rel="shortcut icon" href="assets/images/icons/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="assets/css/style.css">
 	<script src="https://kit.fontawesome.com/3dee8755de.js" crossorigin="anonymous"></script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/script.js"></script>

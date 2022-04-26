@@ -12,6 +12,7 @@ body {
   height: 100%;
   font-family: "Poppins", sans-serif;
   background-color: #f4f4f4;
+  color: #212529;
 }
 
 html[data-theme="dark"] {
@@ -350,7 +351,7 @@ button {
 
 .navBar .group {
   padding: 10px 0;
-  border-top: 1px solid #a0a0a0;
+  /* border-top: 1px solid #a0a0a0; */
 }
 .navBar .group .navItem {
   padding: 12px 0;
@@ -389,12 +390,12 @@ button {
 }
 
 .gridViewItem {
-  height: 200px;
+  height: 250px;
   display: inline-block;
   margin-right: 20px;
   width: 30%;
   text-align: center;
-  max-width: 200px;
+  max-width: 210px;
   min-width: 150px;
   position: relative;
   margin-bottom: 22px;
@@ -429,11 +430,7 @@ button {
 .gridViewItem img:hover {
   opacity: 0.2;
 }
-.gridViewItem:hover {
-  box-shadow: 0px 18px 58px -27px rgba(212, 21, 171, 1);
-  -webkit-box-shadow: 0px 18px 58px -27px rgba(212, 21, 171, 1);
-  -moz-box-shadow: 0px 18px 58px -27px rgba(212, 21, 171, 1);
-}
+
 .gridViewItem .gridViewInfo {
   font-weight: 600;
 
@@ -700,10 +697,11 @@ button {
   color: #fff;
   cursor: pointer;
   margin-bottom: 10px;
-  background-color: #f3f;
+  background-color: #404040;
   font-weight: 600;
   letter-spacing: 2px;
-  border: 2px solid #f3f;
+  border: none;
+  outline: none;
   border-radius: 500px;
   min-width: 249px;
   padding: 6px 40px;
@@ -766,27 +764,18 @@ input:focus {
 }
 
 .btn-danger {
-  background-image: linear-gradient(
-    to right,
-    #16222a 0%,
-    #3a6073 51%,
-    #16222a 100%
-  );
-  margin: 10px;
-  padding: 15px 45px;
+  display: inline-block;
   text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
+  padding: 12px 14px;
+  background: #343a40;
+  border-radius: 40px;
+  margin-top: 20px;
+  transition: opacity 0.3s ease;
+  vertical-align: middle;
+  cursor: pointer;
 }
 .btn-danger:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
+  opacity: 0.9;
 }
 .home-page-icon {
   /* background: #f3f; */

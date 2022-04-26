@@ -8,6 +8,12 @@ if (isset($_POST['loginButton'])) {
 
     if ($result == true) {
         $_SESSION['userloggedin'] = $username;
+        if (isset($_POST['rememberme']))
+        {
+            setcookie('username',$username,time()+86400);
+            setcookie('password',$password,time()+86400);
+            header("Location: home.php");    
+        }
         header("Location: home.php");
     } else {
         echo "some error";

@@ -5,7 +5,7 @@
 			 -->
 			<div class="home-page-icon">
 				<!-- <i class="fas fa-music fa-2x"></i> -->
-				<img src="assets/images/icons/favicon.ico" alt="play image" style="width: 100%;height: auto;">
+				<img src="assets/images/icons/favicon.ico" alt="play image" style="width: 100%;height:auto;">
 			</div>
 		</span>
 		<div class="group">

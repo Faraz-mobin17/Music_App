@@ -7,7 +7,7 @@ $account = new Account($con);
 
 include("includes/handlers/register-handler.php");
 include("includes/handlers/login-handler.php");
-
+ob_start();
 function getInputValue($name)
 {
     if (isset($_POST[$name])) {
@@ -22,7 +22,7 @@ function getInputValue($name)
     <title>What are you waiting for? SIGNUP</title>
     <link rel="shortcut icon" href="assets/images/icons/favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/3dee8755de.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -34,7 +34,7 @@ function getInputValue($name)
 
         <div id="loginContainer ">
             <div id="inputContainer">
-                <form id="loginForm" action="register.php" method="POST">
+                <form id="loginForm" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
                     <div class="avatar-container">
                         <img src="assets/images/avatar.svg" alt="avatar image" style="width: 100%">
                     </div>
@@ -47,7 +47,10 @@ function getInputValue($name)
                         </div>
                         <div>
                             <label for="loginUsername">Username</label>
-                            <input id="loginUsername" class="input" name="loginUsername" type="text" placeholder="e.g. bartSimpson" value="<?php getInputValue('loginUsername') ?>" required>
+                            <input id="loginUsername" class="input" name="loginUsername" type="text" placeholder="e.g. bartSimpson" value="<?php getInputValue('loginUsername');
+                                                                                                                                            if (isset($_COOKIE['username'])) {
+                                                                                                                                                echo $_COOKIE['username'];
+                                                                                                                                            } ?>" required>
                         </div>
                     </div>
                     </p>
@@ -59,13 +62,16 @@ function getInputValue($name)
                         </div>
                         <div>
                             <label for="loginPassword">Password</label>
-                            <input id="loginPassword" class="input" name="loginPassword" type="password" placeholder="Your password" required>
+                            <input id="loginPassword" class="input" name="loginPassword" type="password" placeholder="Your password" value="<?php if (isset($_COOKIE['password'])) {
+                                                                                                                                                echo $_COOKIE['password'];
+                                                                                                                                            } ?>" required>
                         </div>
                     </div>
                     </p>
 
                     <button type="submit" name="loginButton">LOGIN</button>
                     <a href="forget-password.php" class="forgot-pwd">Forgot password ?</a>
+                    <input type="checkbox" name="rememberme" id="rememberme"> Remember Me
                     <div class="hasAccountText">
                         <span id="hideLogin">Don't you have an account ? Sign up here</span>
                     </div>

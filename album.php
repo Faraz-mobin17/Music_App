@@ -58,7 +58,7 @@ $artist = $album->getArtist();
 
 <nav class="optionsMenu">
     <input type="hidden" name="" class="songId">
-    <div class="item"><i class="fas fa-plus"></i>&nbsp;Add to Playlist</div>
+    <?php echo Playlist::getPlaylistsDropdown($con,$userloggedin->getUsername()) ?>
     <div class="item"><i class="fas fa-share"></i>&nbsp;Share</div>
     <div class="item"><i class="far fa-thumbs-up"></i>&nbsp;Like</div>
     <div class="item"><i class="fas fa-user-plus"></i>&nbsp;Follow Artist</div>
